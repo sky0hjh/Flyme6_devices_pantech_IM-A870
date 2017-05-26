@@ -1,0 +1,21 @@
+#
+# ADDITIONAL_DEFAULT_PROPERTIES
+#
+ro.adb.secure=0
+ro.secure=0
+ro.allow.mock.location=1
+ro.debuggable=1
+ro.zygote=zygote32
+dalvik.vm.image-dex2oat-Xms=64m
+dalvik.vm.image-dex2oat-Xmx=64m
+dalvik.vm.dex2oat-Xms=64m
+dalvik.vm.dex2oat-Xmx=512m
+ro.dalvik.vm.native.bridge=0
+debug.atrace.tags.enableflags=0
+#
+# BOOTIMAGE_BUILD_PROPERTIES
+#
+ro.bootimage.build.date=Thứ ba, 22 Tháng ba năm 2016 12:14:31 ICT
+ro.bootimage.build.date.utc=1458623671
+ro.bootimage.build.fingerprint=Vega/cm_ef52l/ef52l:6.0.1/MMB29V/251e4190a5:userdebug/test-keys
+persist.sys.usb.config=adb

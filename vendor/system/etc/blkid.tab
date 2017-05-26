@@ -1,0 +1,2 @@
+<device DEVNO="0xb310" TIME="3469" UUID="57f8f4bc-abf4-655f-bf67-946fc0f9f25b" TYPE="ext4">/dev/block/platform/msm_sdcc.1/by-name/cache</device>
+<device DEVNO="0xb31a" TIME="3469" UUID="57f8f4bc-abf4-655f-bf67-946fc0f9f25b" TYPE="ext4">/dev/block/platform/msm_sdcc.1/by-name/userdata</device>
