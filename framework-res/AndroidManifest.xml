@@ -242,6 +242,7 @@
     <protected-broadcast android:name="android.app.action.DEVICE_OWNER_CHANGED"/>
     <protected-broadcast android:name="org.cyanogenmod.intent.action.THEME_CHANGED"/>
     <protected-broadcast android:name="android.intent.action.THEME_RESOURCES_CACHED"/>
+    <protected-broadcast android:name="com.meizu.safe.ACTION_BLOCK_LOCKED_SCREEN_SHOW"/>
     <eat-comment/>
     <eat-comment/>
     <permission-group android:description="@string/permgroupdesc_contacts" android:icon="@drawable/perm_group_contacts" android:label="@string/permgrouplab_contacts" android:name="android.permission-group.CONTACTS" android:priority="100"/>
@@ -611,6 +612,11 @@
     <permission-group android:description="@string/permgroupdesc_security" android:icon="@drawable/perm_group_security" android:label="@string/permgrouplab_security" android:name="android.permission-group.SECURITY" android:priority="400"/>
     <permission android:description="@string/permdesc_readPhoneBlacklist" android:label="@string/permlab_readPhoneBlacklist" android:name="android.permission.READ_PHONE_BLACKLIST" android:permissionGroup="android.permission-group.SECURITY" android:protectionLevel="system|signature"/>
     <permission android:description="@string/permdesc_changePhoneBlacklist" android:label="@string/permlab_changePhoneBlacklist" android:name="android.permission.CHANGE_PHONE_BLACKLIST" android:permissionGroup="android.permission-group.SECURITY" android:protectionLevel="system|signature"/>
+    <permission android:name="android.permission.MEIZU_CONTROL_PACKAGE_PERMISSIONS" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="android.permission.MEIZU_SMART_LOCK" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="android.permission.FLYME_SWITCH_SYSTEM_MODE" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="android.permission.send.MEIZU_DATASAVE_MODE_CHANGED" android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="com.meizu.safe.permission.ACCESS_APP_SHOW_ON_LOCKED_SCREED_PROVIDER"/>
     <uses-permission android:name="android.permission.CONFIRM_FULL_BACKUP"/>
     <permission android:description="@string/permdesc_accessThemeService" android:label="@string/permlab_accessThemeService" android:name="android.permission.ACCESS_THEME_MANAGER" android:protectionLevel="system|signature"/>
     <permission android:description="@string/permdesc_readThemesDesc" android:label="@string/permlab_readThemes" android:name="android.permission.READ_THEMES" android:protectionLevel="normal"/>

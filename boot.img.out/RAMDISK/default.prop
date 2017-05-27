@@ -18,4 +18,4 @@ debug.atrace.tags.enableflags=0
 ro.bootimage.build.date=Thứ ba, 22 Tháng ba năm 2016 12:14:31 ICT
 ro.bootimage.build.date.utc=1458623671
 ro.bootimage.build.fingerprint=Vega/cm_ef52l/ef52l:6.0.1/MMB29V/251e4190a5:userdebug/test-keys
-persist.sys.usb.config=adb
+persist.sys.usb.config=adb,mtp

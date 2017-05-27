@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/server/SystemServer$FlymeInjector;,
         Lcom/android/server/SystemServer$AdbPortObserver;
     }
 .end annotation
@@ -1604,7 +1605,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    new-instance v70, Lcom/android/server/InputMethodManagerService;
+    new-instance v70, Lcom/android/server/MzInputMethodManagerService;
 
     move-object/from16 v0, v70
 
@@ -1749,7 +1750,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    new-instance v77, Lcom/android/server/LockSettingsService;
+    new-instance v77, Lcom/android/server/FlymeExtLockSettingsService;
 
     move-object/from16 v0, v77
 
@@ -1826,7 +1827,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    new-instance v96, Lcom/android/server/statusbar/StatusBarManagerService;
+    new-instance v96, Lcom/android/server/statusbar/FlymeExtStatusBarManagerService;
 
     move-object/from16 v0, v96
 
@@ -2865,6 +2866,8 @@
     invoke-virtual {v4, v5}, Lcom/android/server/SystemServiceManager;->startService(Ljava/lang/Class;)Lcom/android/server/SystemService;
 
     :cond_1c
+    goto/16 :goto_flyme_0
+
     if-nez v54, :cond_1d
 
     :try_start_35
@@ -2898,6 +2901,7 @@
 
     .end local v35    # "atlas":Lcom/android/server/AssetAtlasService;
     :cond_1d
+    :goto_flyme_0
     :goto_26
     if-nez v54, :cond_1e
 
@@ -3290,6 +3294,15 @@
 
     .line 1075
     .local v81, "mmsService":Lcom/android/server/MmsServiceBroker;
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v4, v110
+
+    move-object/from16 v5, v107
+
+    invoke-static {v0, v4, v5}, Lcom/android/server/SystemServer$FlymeInjector;->addFlymeServices(Lcom/android/server/SystemServer;Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wallpaper/WallpaperManagerService;)V
+
     const/4 v4, 0x0
 
     move-object/from16 v0, v64
