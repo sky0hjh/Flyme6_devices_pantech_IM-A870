@@ -2706,12 +2706,12 @@
 
     move-result v2
 
+    .line 1355
+    :cond_17
     invoke-static {p0, p1, v2}, Landroid/content/res/Configuration$FlymeInjector;->compareTo(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
 
     move-result v2
 
-    .line 1355
-    :cond_17
     return v2
 .end method
 
