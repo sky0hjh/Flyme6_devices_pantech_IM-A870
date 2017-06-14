@@ -32,7 +32,9 @@ ro.product.manufacturer=Pantech
 ro.product.locale=zh-CN
 ro.wifi.channels=
 ro.board.platform=msm8960
-ro.product.device=IM-A870
+ro.build.product=ef52l
+ro.product.model=IM-A870
+ro.product.device=ef52l
 # Do not try to parse description, fingerprint, or thumbprint
 ro.build.description=cm_ef52l-userdebug 6.0.1 MMB29V 251e4190a5 test-keys
 ro.build.fingerprint=VEGA/cm_ef52l/ef52l:6.0.1/MMB29V/251e4190a5:userdebug/test-keys
