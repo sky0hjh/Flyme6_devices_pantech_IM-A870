@@ -145,6 +145,21 @@
 
     .line 83
     :cond_1
+    const-string/jumbo v0, "com.meizu.flyme.xtemui"
+
+    iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_flyme_2
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Lcom/android/server/am/ProcessRecord;->curSchedGroup:I
+
+    :cond_flyme_2
     return-void
 
     .line 93
