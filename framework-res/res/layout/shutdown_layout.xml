@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/shutdown_background" android:padding="@dimen/shutdown_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center" android:id="@id/shutdown_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/shutdown_logo_margin_top" android:src="@drawable/shutdown_brand_logo" android:layout_centerHorizontal="true" android:contentDescription="@null" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="36.0dip">
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:animateLayoutChanges="true">
+                <TextView android:textColor="@color/shutdown_primary_text" android:ellipsize="marquee" android:gravity="center" android:id="@id/shutdown_message" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/shutdown_primary_text_margin_top" android:maxLines="1" android:lines="1" android:scrollHorizontally="true" android:singleLine="true" android:layout_below="@id/shutdown_logo_shadow" android:layout_centerHorizontal="true" android:marqueeRepeatLimit="marquee_forever" style="?android:attr/textAppearanceLarge" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <ProgressBar android:id="@id/shutdown_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:indeterminate="true" android:indeterminateTint="@color/shutdown_progress_tint" android:indeterminateTintMode="src_in" style="@android:style/Widget.Material.ProgressBar.Horizontal" />
+    </LinearLayout>
+</RelativeLayout>

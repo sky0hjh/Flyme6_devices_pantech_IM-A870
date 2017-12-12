@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.Material.Large" parent="@style/TextAppearance.Material">
+        <item name="textSize">@dimen/text_size_large_material</item>
+        <item name="textColor">#ffffffff</item>
+    </style>
+    <style name="TextAppearance.Material.Notification" parent="@style/TextAppearance.Material">
+        <item name="textSize">@dimen/notification_text_size</item>
+        <item name="textColor">@color/secondary_text_material_dark</item>
+    </style>
+    <style name="TextAppearance.Material.Notification.Emphasis" parent="@style/TextAppearance.Material.Notification">
+        <item name="textColor">#ffffffff</item>
+    </style>
+    <style name="TextAppearance.Material.Notification.Info" parent="@style/TextAppearance.Material.Notification">
+        <item name="textSize">@dimen/notification_subtext_size</item>
+        <item name="textColor">@color/secondary_text_material_dark</item>
+    </style>
+    <style name="TextAppearance.Material.Notification.Line2" parent="@style/TextAppearance.Material.Notification">
+        <item name="textSize">@dimen/notification_subtext_size</item>
+        <item name="textColor">@color/secondary_text_material_dark</item>
+    </style>
+    <style name="TextAppearance.Material.Notification.Time" parent="@style/TextAppearance.Material.Notification">
+        <item name="textSize">@dimen/notification_subtext_size</item>
+        <item name="textColor">@color/secondary_text_material_dark</item>
+    </style>
+    <style name="TextAppearance.Material.Notification.Title" parent="@style/TextAppearance.Material.Notification">
+        <item name="textSize">@dimen/notification_title_text_size</item>
+        <item name="textColor">@color/primary_text_material_dark</item>
+    </style>
+    <style name="TextAppearance.Material.Small" parent="@style/TextAppearance.Material">
+        <item name="textSize">@dimen/text_size_small_material</item>
+        <item name="textColor">#ff9a9a9a</item>
+    </style>
+    <style name="Theme.Material.DayNight" parent="@style/Theme.Material" />
+    <style name="Theme.Material.DayNight.DarkActionBar" parent="@style/Theme.Material" />
+    <style name="Theme.Material.DayNight.Dialog" parent="@style/Theme.Material.DayNight.BaseDialog" />
+    <style name="Theme.Material.DayNight.Dialog.Alert" parent="@style/Theme.Material.DayNight.Dialog.BaseAlert" />
+    <style name="Theme.Material.DayNight.Dialog.MinWidth" parent="@style/Theme.Material.Dialog.MinWidth" />
+    <style name="Theme.Material.DayNight.Dialog.NoActionBar" parent="@style/Theme.Material.Dialog.NoActionBar" />
+    <style name="Theme.Material.DayNight.Dialog.NoActionBar.MinWidth" parent="@style/Theme.Material.Dialog.NoActionBar.MinWidth" />
+    <style name="Theme.Material.DayNight.Dialog.Presentation" parent="@style/Theme.Material.Dialog.Presentation" />
+    <style name="Theme.Material.DayNight.DialogWhenLarge" parent="@style/Theme.Material.DialogWhenLarge" />
+    <style name="Theme.Material.DayNight.DialogWhenLarge.NoActionBar" parent="@style/Theme.Material.DialogWhenLarge.NoActionBar" />
+    <style name="Theme.Material.DayNight.NoActionBar" parent="@style/Theme.Material.NoActionBar" />
+    <style name="Theme.Material.DayNight.NoActionBar.Fullscreen" parent="@style/Theme.Material.NoActionBar.Fullscreen" />
+    <style name="Theme.Material.DayNight.NoActionBar.Overscan" parent="@style/Theme.Material.NoActionBar.Overscan" />
+    <style name="Theme.Material.DayNight.NoActionBar.TranslucentDecor" parent="@style/Theme.Material.NoActionBar.TranslucentDecor" />
+    <style name="Theme.Material.DayNight.Panel" parent="@style/Theme.Material.Panel" />
+    <style name="Theme.Material.DayNight.DialogWhenLarge.DarkActionBar" parent="@style/Theme.Material.DialogWhenLarge" />
+    <style name="Theme.DeviceDefault.Resolver" parent="@style/Theme.Material">
+        <item name="windowBackground">@color/transparent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowIsTranslucent">true</item>
+        <item name="windowContentOverlay">@null</item>
+        <item name="backgroundDimEnabled">true</item>
+        <item name="listPreferredItemPaddingStart">?dialogPreferredPadding</item>
+        <item name="listPreferredItemPaddingEnd">?dialogPreferredPadding</item>
+        <item name="windowTranslucentStatus">false</item>
+        <item name="windowTranslucentNavigation">false</item>
+        <item name="colorControlActivated">?colorControlHighlight</item>
+        <item name="windowDrawsSystemBarBackgrounds">false</item>
+        <item name="backgroundTint">@color/background_material_dark</item>
+    </style>
+    <style name="Theme.Material.DayNight.BaseDialog" parent="@style/Theme.Material.BaseDialog" />
+    <style name="Theme.Material.DayNight.Dialog.FixedSize" parent="@style/Theme.Material.Dialog.FixedSize" />
+    <style name="Theme.Material.DayNight.Dialog.NoActionBar.FixedSize" parent="@style/Theme.Material.Dialog.NoActionBar.FixedSize" />
+    <style name="Theme.Material.DayNight.Dialog.BaseAlert" parent="@style/Theme.Material.Dialog.BaseAlert" />
+    <style name="Theme.Material.DayNight.SearchBar" parent="@style/Theme.Material.SearchBar" />
+    <style name="Theme.Material.DayNight.CompactMenu" parent="@style/Theme.Material.CompactMenu" />
+</resources>
