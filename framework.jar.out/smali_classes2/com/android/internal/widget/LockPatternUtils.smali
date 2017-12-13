@@ -402,7 +402,7 @@
     .line 1107
     const-string/jumbo v1, "lockscreen.password_salt"
 
-    invoke-virtual {p0, v1, v2, v3, p1}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
+    invoke-direct {p0, v1, v2, v3, p1}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
 
     .line 1108
     const-string/jumbo v1, "LockPatternUtils"
@@ -1824,7 +1824,7 @@
 
     const-wide/16 v2, 0x0
 
-    invoke-virtual {p0, v1, v2, v3, p1}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
+    invoke-direct {p0, v1, v2, v3, p1}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
 
     .line 584
     :try_start_0
@@ -2222,12 +2222,12 @@
     .line 1315
     const-string/jumbo v6, "lockscreen.lockoutattemptdeadline"
 
-    invoke-virtual {p0, v6, v8, v9, p1}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
+    invoke-direct {p0, v6, v8, v9, p1}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
 
     .line 1316
     const-string/jumbo v6, "lockscreen.lockoutattempttimeoutmss"
 
-    invoke-virtual {p0, v6, v8, v9, p1}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
+    invoke-direct {p0, v6, v8, v9, p1}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
 
     .line 1317
     return-wide v8
@@ -2246,7 +2246,7 @@
     .line 1323
     const-string/jumbo v6, "lockscreen.lockoutattemptdeadline"
 
-    invoke-virtual {p0, v6, v0, v1, p1}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
+    invoke-direct {p0, v6, v0, v1, p1}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
 
     .line 1326
     :cond_1
@@ -3574,7 +3574,7 @@
 
     move/from16 v0, p4
 
-    invoke-virtual {p0, v11, v12, v13, v0}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
+    invoke-direct {p0, v11, v12, v13, v0}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
 
     .line 874
     invoke-direct {p0}, Lcom/android/internal/widget/LockPatternUtils;->getLockSettings()Lcom/android/internal/widget/ILockSettings;
@@ -3897,7 +3897,7 @@
 
     const-wide/32 v4, 0x10000
 
-    invoke-virtual {p0, v3, v4, v5, p3}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
+    invoke-direct {p0, v3, v4, v5, p3}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
 
     .line 643
     invoke-direct {p0}, Lcom/android/internal/widget/LockPatternUtils;->getLockSettings()Lcom/android/internal/widget/ILockSettings;
@@ -4249,7 +4249,7 @@
     .line 1273
     const-string/jumbo v0, "lock_pattern_size"
 
-    invoke-virtual {p0, v0, p1, p2, p3}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
+    invoke-direct {p0, v0, p1, p2, p3}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
 
     .line 1272
     return-void
@@ -4289,20 +4289,20 @@
     .local v0, "deadline":J
     const-string/jumbo v2, "lockscreen.lockoutattemptdeadline"
 
-    invoke-virtual {p0, v2, v0, v1, p1}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
+    invoke-direct {p0, v2, v0, v1, p1}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
 
     .line 1300
     const-string/jumbo v2, "lockscreen.lockoutattempttimeoutmss"
 
     int-to-long v4, p2
 
-    invoke-virtual {p0, v2, v4, v5, p1}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
+    invoke-direct {p0, v2, v4, v5, p1}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
 
     .line 1301
     return-wide v0
 .end method
 
-.method protected setLong(Ljava/lang/String;JI)V
+.method private setLong(Ljava/lang/String;JI)V
     .locals 4
     .param p1, "secureSettingKey"    # Ljava/lang/String;
     .param p2, "value"    # J
