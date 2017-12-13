@@ -167,6 +167,10 @@
     .param p1, "themeResId"    # I
 
     .prologue
+    invoke-static/range {p0 .. p1}, Landroid/app/AlertDialog$FlymeInjector;->getFlymeAlertDialogTheme(Landroid/content/Context;I)I
+
+    move-result p1
+
     const v2, #android:style@Theme.DeviceDefault.Light.Dialog.Alert#t
 
     const/4 v3, 0x1

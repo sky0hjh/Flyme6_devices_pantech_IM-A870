@@ -1275,6 +1275,14 @@
 
     or-int/2addr v1, p1
 
+    or-int/lit16 v1, v1, 0x4000
+
+    const v0, 0x8000
+
+    or-int/2addr v1, v0
+
+    const/4 v0, 0x0
+
     const/high16 v2, 0x200000
 
     or-int/2addr v1, v2
