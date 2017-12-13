@@ -93,7 +93,7 @@ vendor_modify_jars := framework services telephony-common wifi-service
 # The default value is nothing.
 # You can configure the board system apk name in the value.
 #-----------------------------------------------------------------------------
-#board_remove_apps := LogReport
+board_remove_apps := LogReport
 
 ##############################################################################
 # The value decides which apk you want to modify, when the apk is based on the board system apk.
@@ -138,8 +138,8 @@ vendor_modify_jars := framework services telephony-common wifi-service
 # The default value is Nexus-6P_Unofficial.
 # You should configure the property according to your device and your ID with replace the "Nexus-6P_Unofficial".
 override_property += \
-    ro.flyme.romer=Unofficial \
-    ro.product.model_romer=Pixel_Unofficial
+    ro.flyme.romer=garyyiiu2015 \
+    ro.product.model_romer=IM-A870_garyyiu2015
 
 ##############################################################################
 # The value decides which property you will remove from the build.prop.
