@@ -3,23 +3,14 @@
 # The filesystem that contains the filesystem checker binary (typically /system) cannot
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
-/system		auto	/dev/block/platform/msm_sdcc.1/by-name/system         flags=fsflags="inline_xattr";display="System"
-/data		auto	/dev/block/platform/msm_sdcc.1/by-name/userdata 	  flags=fsflags="inline_xattr";display="Internal Storage"	length=-16384
-/cache		auto	/dev/block/platform/msm_sdcc.1/by-name/cache          flags=fsflags="inline_xattr";display="Cache"
-/persist	ext4	/dev/block/platform/msm_sdcc.1/by-name/persist		flags=display="persist";backup=1
-/firmware	vfat	/dev/block/platform/msm_sdcc.1/by-name/modem		flags=display="modem";backup=1
-/boot		emmc	/dev/block/platform/msm_sdcc.1/by-name/boot			flags=display="Boot"
-/recovery	emmc	/dev/block/platform/msm_sdcc.1/by-name/recovery
-/efs1         emmc   /dev/block/platform/msm_sdcc.1/by-name/m9kefs1 flags=backup=1;display=EFS
-/efs2         emmc   /dev/block/platform/msm_sdcc.1/by-name/m9kefs2 flags=backup=1;subpartitionof=/efs1
-/efs3         emmc   /dev/block/platform/msm_sdcc.1/by-name/m9kefs3 flags=backup=1;subpartitionof=/efs1
-#/misc		emmc	/dev/block/platform/msm_sdcc.1/by-name/misc
-#/sbl1		emmc	/dev/block/platform/msm_sdcc.1/by-name/sbl1
-#/tz			emmc	/dev/block/platform/msm_sdcc.1/by-name/tz
-#/rpm		emmc	/dev/block/platform/msm_sdcc.1/by-name/rpm
-#/sdi		emmc	/dev/block/platform/msm_sdcc.1/by-name/sdi
-#/aboot		emmc	/dev/block/platform/msm_sdcc.1/by-name/aboot
-/rawdata		emmc	/dev/block/platform/msm_sdcc.1/by-name/rawdata flags=display="Phone info";backup=1
+/dev/block/platform/msm_sdcc.1/by-name/boot         /boot           		emmc    defaults                                       recoveryonly
+/dev/block/platform/msm_sdcc.1/by-name/recovery     /recovery           	emmc    defaults                                       recoveryonly
+/dev/block/platform/msm_sdcc.1/by-name/system       /system         		ext4    rw,barrier=1                                   wait
+#/dev/block/platform/msm_sdcc.1/by-name/persist      /persist        		ext4    nosuid,nodev,barrier=1                  	   wait,check
+/dev/block/platform/msm_sdcc.1/by-name/userdata     /data         			ext4    nosuid,nodev,barrier=1,noauto_da_alloc       	wait,check,encryptable=/persist/metadata,length=-16384
+/dev/block/platform/msm_sdcc.1/by-name/cache        /cache          		ext4    nosuid,nodev,barrier=1                     		wait,check
+#/dev/block/platform/msm_sdcc.1/by-name/modem        /firmware       		vfat    ro,uid=1000,gid=1000,dmask=227,fmask=337		wait
 
-/external_sd   	   auto      /dev/block/mmcblk1p1 		flags=display="external_sd";storage;wipeingui;removable
-/usbdisk	   auto		/dev/block/sda1		/dev/block/sda 		flags=display="USB OTG";storage;removable
+/devices/platform/msm_sdcc.3 						auto 		  			auto    defaults 										voldmanaged=external_sd:auto
+/devices/platform/msm_hsusb_host/usb2				auto		  			vfat	defaults										voldmanaged=usbdisk:auto
+

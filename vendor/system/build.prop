@@ -32,6 +32,12 @@ ro.product.manufacturer=Pantech
 ro.product.locale=en-US
 ro.wifi.channels=
 ro.board.platform=msm8960
+ro.build.product=ef52l
+ro.product.model=IM-A870
+ro.product.device=ef52l
+# Do not try to parse description, fingerprint, or thumbprint
+ro.build.description=viper_ef52l-userdebug 7.1.2 NJH47B a229872ec1 release-keys
+ro.build.fingerprint=VEGA/viper_ef52l/ef52l:7.1.2/NJH47B/a229872ec1:userdebug/release-keys
 ro.build.characteristics=default
 ro.viper.device=ef52l
 # end build properties
